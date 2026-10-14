@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My first website built using HTML, CSS, JavaScript and GitHub Pages">
+    <title>My First Website</title>
+
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #263248;
+            background-color: #f5f7ff;
+        }
+
+        /* Navigation bar */
+        header {
+            background-color: #243b80;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #b9d5ff;
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 400px;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #dce8ff, #f4e9ff);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            color: #243b80;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #3056a0;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #172d65;
+        }
+
+        /* About section */
+        section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            color: #243b80;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* Features section */
+        .features {
+            background-color: white;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background-color: #f5f7ff;
+            padding: 30px 20px;
+            border-radius: 12px;
+            width: 260px;
+            box-shadow: 0 4px 15px rgba(30, 50, 100, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .feature-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            color: #3056a0;
+            margin-bottom: 10px;
+        }
+
+        /* Contact section */
+        .contact p {
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #243b80;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            section {
+                padding: 45px 20px;
+            }
+
+            .feature-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h2>MyWebsite</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home section -->
+    <main>
+        <section class="hero" id="home">
+            <h1>Welcome to My Website!</h1>
+
+            <p>
+                Discover my first website created using HTML, CSS
+                and JavaScript, and published online using GitHub Pages.
+            </p>
+
+            <a href="#about" class="button">Explore More</a>
+        </section>
+
+        <!-- About section -->
+        <section class="about" id="about">
+            <h2>About This Website</h2>
+
+            <p>
+                This is a simple, responsive website created using
+                basic web development technologies. HTML provides
+                the structure, CSS adds the design, and JavaScript
+                makes the page interactive.
+            </p>
+        </section>
+
+        <!-- Features section -->
+        <section class="features" id="features">
+            <h2>My Features</h2>
+
+            <div class="feature-container">
+
+                <div class="feature-card">
+                    <div class="icon">💻</div>
+                    <h3>HTML</h3>
+                    <p>Build the structure and content of a webpage.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🎨</div>
+                    <h3>CSS</h3>
+                    <p>Style the website with colors, layouts and fonts.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>Add interactions and dynamic behavior.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+
+            <p>Thank you for visiting my first website!</p>
+
+            <button class="button" id="welcomeButton">
+                Click Me
+            </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; <span id="year"></span> MyWebsite.
+            Created with HTML, CSS and JavaScript.
+        </p>
+    </footer>
+
+    <script>
+        // Display the current year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Button interaction
+        document.getElementById("welcomeButton").addEventListener(
+            "click",
+            function () {
+                alert("Hello! Your website is working successfully!");
+            }
+        );
+    </script>
+
+</body>
+</html>
